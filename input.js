@@ -18,8 +18,6 @@ const setupInput = function (conn) {
   // call the callback if receive input from keyboard
   stdin.on("data", handleUserInput);
 
-  //connection.write("Say:Y");
-
   return stdin;
 };
 
@@ -36,6 +34,9 @@ const handleUserInput = function (key) {
     connection.write('Move: down');
   } else if (key === 'd') {
     connection.write('Move: right');
+    // Implement some special keys that send canned messages to the server, for everyone to see.
+  } else if (key === "h") {
+    connection.write('Say: Hi');
   }
 };
 
