@@ -18,6 +18,8 @@ const setupInput = function (conn) {
   // call the callback if receive input from keyboard
   stdin.on("data", handleUserInput);
 
+  //connection.write("Say:Y");
+
   return stdin;
 };
 
