@@ -25,6 +25,8 @@ const connect = function () {
     conn.write("Name: WL");
   })
 
+  return conn;
+
 
 };
 
